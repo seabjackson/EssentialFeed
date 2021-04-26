@@ -10,6 +10,7 @@
 		B52A91A5262CF76A00F24FB0 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A919B262CF76A00F24FB0 /* EssentialFeed.framework */; };
 		B52A91BC262CF7C200F24FB0 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52A91BB262CF7C200F24FB0 /* FeedItem.swift */; };
 		B52A91C0262CF90600F24FB0 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52A91BF262CF90600F24FB0 /* FeedLoader.swift */; };
+		B52A91C52631B38F00F24FB0 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52A91C42631B38F00F24FB0 /* RemoteFeedLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B52A91AB262CF76A00F24FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B52A91BB262CF7C200F24FB0 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		B52A91BF262CF90600F24FB0 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		B52A91C42631B38F00F24FB0 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				B52A91AB262CF76A00F24FB0 /* Info.plist */,
+				B52A91C42631B38F00F24FB0 /* RemoteFeedLoaderTests.swift */,
 			);
 			path = EssentialFeedTests;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 					};
 					B52A91A3262CF76A00F24FB0 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -211,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52A91C52631B38F00F24FB0 /* RemoteFeedLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 86SYWTB5Q2;
@@ -412,6 +418,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.seabjackson.EssentialFeedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -420,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 86SYWTB5Q2;
