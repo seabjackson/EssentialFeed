@@ -47,7 +47,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
         makeSUT().get(from: url) { _ in }
         wait(for: [exp], timeout: 1.0)
     }
-
+    
     func test_getFromURL_failsOnRequestError() {
         let url = URL(string: "https://any-url.com")!
         let error = NSError(domain: "any error", code: 1)
@@ -70,8 +70,16 @@ final class URLSessionHTTPClientTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT() -> URLSessionHTTPClient {
-        URLSessionHTTPClient()
+    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> URLSessionHTTPClient {
+        let sut = URLSessionHTTPClient()
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
+    }
+    
+    private func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(instance, "Instance should have been deallocated", file: file, line: line)
+        }
     }
     
     private class URLProtocolStub: URLProtocol {
